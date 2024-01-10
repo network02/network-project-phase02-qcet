@@ -618,7 +618,9 @@ class ClientHandler:
                     arguments = command_separated_parts[1]
                     arguments = arguments.replace('/', "\\")
                 elif command_opcode == "LIST" and 4 < len(command_coming_from_client):
+
                     arguments = command_separated_parts[1]
+                    arguments = arguments.replace('/', "\\")
                 else:
                     # if self.admin_mode:
                     #  self.handle_admin_command(command_opcode)
