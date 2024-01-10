@@ -614,7 +614,7 @@ class ClientHandler:
 
                 arguments = ""
                 if command_opcode == "USER" or command_opcode == "PASS" or command_opcode == "MKD" or command_opcode == "RMD" or \
-                        command_opcode == "CWD" or command_opcode == "RETR" or command_opcode == "STOR" or command_opcode == "DELE":
+                        command_opcode == "CWD" or command_opcode == "RETR" or command_opcode == "STOR" or command_opcode == "DELE" or command_opcode == "REGISTER":
                     arguments = command_separated_parts[1]
                     arguments = arguments.replace('/', "\\")
                 elif command_opcode == "LIST" and 4 < len(command_coming_from_client):
